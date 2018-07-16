@@ -5,14 +5,14 @@ CORS checking
 >the file is a list subdomains that's result from aquatone tool
 
 2. Bruteforce endpoints and then checking for cors
-python corser.py -u https://target.com/ -list_endpoint "path to your endpoint file" -origin attacker.com
+* python corser.py -u https://target.com/ -list_endpoint "path to your endpoint file" -origin attacker.com
 
 3. Trying to bypass origin when we encounter filter
-python corser.py -u https://target.com -origin attacker.com -fuzz true
+* python corser.py -u https://target.com -origin attacker.com -fuzz true
 
 4. Gen Poc
-python corser.py -poc GET
-python corser.py -poc POST
+* python corser.py -poc GET
+* python corser.py -poc POST
 
 additional options
 
