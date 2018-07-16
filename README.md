@@ -2,7 +2,7 @@
 CORS checking
 1. Scanning for list domains
 * python corser.py -list_domain "path to your file" -origin attacker.com
->the file is a list subdomains that's result from aquatone tool
+>the file is a list subdomains that's result from aquatone tool: file:///root/aquatone/target.com/urls.txt
 
 2. Bruteforce endpoints and then checking for cors
 * python corser.py -u https://target.com/ -list_endpoint "path to your endpoint file" -origin attacker.com
