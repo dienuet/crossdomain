@@ -18,7 +18,7 @@ Checking for CORS misconfiguration
 * python corser.py -poc GET
 * python corser.py -poc POST
 
-![alt text](https://image.ibb.co/jv01Gy/fuzz.png "Fig4")
+![alt text](https://image.ibb.co/hiv1Gy/Screenshot_from_2018_07_16_01_46_14.png "Fig4")
 additional options
 
 -t : set number of threads
