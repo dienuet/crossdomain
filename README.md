@@ -17,7 +17,7 @@ Usage: python corser.py -h
 
 3. Trying to bypass origin when we encounter filter
 
-example back-end sourcecode
+simple filter
 
 ```php
 <?php
