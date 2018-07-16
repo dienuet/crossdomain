@@ -356,7 +356,6 @@ if __name__ == '__main__':
 			thread = thread_processing(args.u,args.list_domain,args.list_endpoint,args.header,args.origin)
    			thread.start()
    			threads.append(thread)
-		# Wait for queue to empty
 		while not workQueue.empty():
    			pass
 		# Notify threads to exit
