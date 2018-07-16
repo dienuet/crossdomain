@@ -39,6 +39,7 @@ echo "your code: hacker1337";
 * python corser.py -u https://target.com -origin attacker.com -fuzz true
 
 ![alt text](https://image.ibb.co/bNsgYd/Screenshot_from_2018_07_16_02_24_28.png "Fig3")
+
 4. Gen Poc
 * python corser.py -poc GET
 * python corser.py -poc POST
