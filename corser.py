@@ -246,7 +246,6 @@ def bypass_filter(url,origin,header):
 		prefix.append(tmp[0]+'.'+origin+'.'+tmp[1])
 		prefix.append(urls+'-dev.'+origin)
 		prefix.append(tmp[0]+tmp[1]+'-dev.'+origin)
-		prefix.append(origin+'/'+urls)
 	if(len(tmp)==3):
 		prefix.append(urls+'.'+origin)
 		prefix.append(tmp[0]+'-'+tmp[1]+'-'+tmp[2]+'.'+origin)
@@ -255,7 +254,6 @@ def bypass_filter(url,origin,header):
 		prefix.append(urls+'-dev.'+origin)
 		prefix.append(tmp[0]+'.'+origin+'.'+tmp[1])
 		prefix.append(tmp[0]+tmp[1]+tmp[2]+'-dev.'+origin)
-		prefix.append(origin+'/'+urls)
 	for i in range(0,len(prefix)):
 		patterns.append(prefix[i])
 		for schema in ['http://','https://']:
