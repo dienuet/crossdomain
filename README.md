@@ -4,12 +4,11 @@ Checking for CORS misconfiguration
 * python corser.py -list_domain ~/aquatone/target.com/urls.txt -origin attacker.com
 
 >the file is a list subdomains that's result from aquatone tool
-
-Inline-style: 
-![alt text](https://image.ibb.co/dXCqby/endpoint.png "Logo Title Text 1")
-
+ 
 2. Bruteforce endpoints and then checking for cors
 * python corser.py -u https://target.com/ -list_endpoint ~/Desktop/listendpoint.txt -origin attacker.com
+
+![alt text](https://image.ibb.co/dXCqby/endpoint.png "Logo Title Text 1")
 
 3. Trying to bypass origin when we encounter filter
 * python corser.py -u https://target.com -origin attacker.com -fuzz true
