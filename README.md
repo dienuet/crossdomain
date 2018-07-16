@@ -16,5 +16,7 @@ python corser.py -poc POST
 
 additional options
 -t : set number of threads
+
 -header : custom your request if website requires authenticated cookie
+
 ex: python corser.py -u https://target.com -header "Cookie:sessid=123456;role=user, Authorization: zxbdGDH7438"
