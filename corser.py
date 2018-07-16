@@ -146,12 +146,7 @@ def cors_detection(response,origin,url):
 def display_header(header):
 	print "\033[1;36m-------------------------------------------------------------------\033[1;m"
 	for key, value in header.iteritems():
-		if(key == 'access-control-allow-origin'):
-			print key[0].upper()+key[1:]+": "+"\033[1;42m"+header[key]+"\033[1;m"
-		if(key == 'access-control-allow-credentials'):
-			print key[0].upper()+key[1:]+": "+"\033[1;42m"+header[key]+"\033[1;m"
-		else:
-			print key[0].upper()+key[1:]+": "+header[key]
+		print key[0].upper()+key[1:]+": "+header[key]
 	print "\033[1;36m-------------------------------------------------------------------\033[1;m"
 
 #random useragent
@@ -246,6 +241,7 @@ def bypass_filter(url,origin,header):
 		prefix.append(tmp[0]+'.'+origin+'.'+tmp[1])
 		prefix.append(urls+'-dev.'+origin)
 		prefix.append(tmp[0]+tmp[1]+'-dev.'+origin)
+		prefix.append(origin+'/'+urls)
 	if(len(tmp)==3):
 		prefix.append(urls+'.'+origin)
 		prefix.append(tmp[0]+'-'+tmp[1]+'-'+tmp[2]+'.'+origin)
@@ -254,6 +250,7 @@ def bypass_filter(url,origin,header):
 		prefix.append(urls+'-dev.'+origin)
 		prefix.append(tmp[0]+'.'+origin+'.'+tmp[1])
 		prefix.append(tmp[0]+tmp[1]+tmp[2]+'-dev.'+origin)
+		prefix.append(origin+'/'+urls)
 	for i in range(0,len(prefix)):
 		patterns.append(prefix[i])
 		for schema in ['http://','https://']:
@@ -302,7 +299,7 @@ if __name__ == '__main__':
 	parser.add_argument('-list_endpoint', help='Path to your list endpoints. Ex: ~/Desktop/domain/listendpoints.txt',metavar='')
 	parser.add_argument('-header', help='Custom request header if authentication is required.',type=str,metavar='')
 	parser.add_argument('-origin', help='Add Origin field into request header.',metavar='')
-	parser.add_argument('-t', help='Number of threads. Default: 3.', default=3, type=int, metavar='')
+	parser.add_argument('-t', help='Number of threads. Default: 5.', default=3, type=int, metavar='')
 	parser.add_argument('-poc', help='Gen CORS PoC using GET or POST.', metavar='')
 	parser.add_argument('-fuzz', help='Trying to bypass origin if we encounter filter. Default=False', default=False,type=bool,metavar='')
 	args = parser.parse_args()
@@ -356,6 +353,7 @@ if __name__ == '__main__':
 			thread = thread_processing(args.u,args.list_domain,args.list_endpoint,args.header,args.origin)
    			thread.start()
    			threads.append(thread)
+		# Wait for queue to empty
 		while not workQueue.empty():
    			pass
 		# Notify threads to exit
@@ -364,6 +362,4 @@ if __name__ == '__main__':
 		for t in threads:
    			t.join()
 		print "\033[1;42m-----===EXIT===-----\033[1;m"
-
-
-
+		
