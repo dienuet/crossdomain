@@ -4,6 +4,7 @@ Checking for CORS misconfiguration
 * python corser.py -list_domain ~/aquatone/target.com/urls.txt -origin attacker.com
 
 >the file is a list subdomains that's result from aquatone tool
+
 Reference-style: 
 ![alt text](https://ibb.co/fhdVby)
 
