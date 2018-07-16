@@ -8,15 +8,17 @@ Checking for CORS misconfiguration
 2. Bruteforce endpoints and then checking for cors
 * python corser.py -u https://target.com/ -list_endpoint ~/Desktop/listendpoint.txt -origin attacker.com
 
-![alt text](https://image.ibb.co/dXCqby/endpoint.png "Logo Title Text 1")
+![alt text](https://image.ibb.co/dXCqby/endpoint.png "Fig2")
 
 3. Trying to bypass origin when we encounter filter
 * python corser.py -u https://target.com -origin attacker.com -fuzz true
 
+![alt text](https://image.ibb.co/jv01Gy/fuzz.png "Fig3")
 4. Gen Poc
 * python corser.py -poc GET
 * python corser.py -poc POST
 
+![alt text](https://image.ibb.co/jv01Gy/fuzz.png "Fig4")
 additional options
 
 -t : set number of threads
