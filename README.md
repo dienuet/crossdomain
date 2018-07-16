@@ -1,5 +1,5 @@
 # crossdomain
-CORS checking
+Checking for CORS misconfiguration
 1. Scanning for list domains
 * python corser.py -list_domain ~/aquatone/target.com/urls.txt -origin attacker.com
 
