@@ -1,0 +1,2 @@
+# crossdomain
+CORS checking
