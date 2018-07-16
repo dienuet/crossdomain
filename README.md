@@ -5,8 +5,8 @@ Checking for CORS misconfiguration
 
 >the file is a list subdomains that's result from aquatone tool
 
-Reference-style: 
-![alt text](https://ibb.co/fhdVby)
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
 
 2. Bruteforce endpoints and then checking for cors
 * python corser.py -u https://target.com/ -list_endpoint ~/Desktop/listendpoint.txt -origin attacker.com
