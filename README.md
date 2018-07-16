@@ -15,6 +15,7 @@ python corser.py -poc GET
 python corser.py -poc POST
 
 additional options
+
 -t : set number of threads
 
 -header : custom your request if website requires authenticated cookie
